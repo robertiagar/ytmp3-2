@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 
 import { Link } from '../link';
 
+import { MainService } from '../main.service';
+
 @Component({
   selector: 'app-video',
   templateUrl: './video.component.html',
@@ -15,7 +17,7 @@ export class VideoComponent implements OnInit {
 
   placeholder: String = 'YouTube link here';
 
-  constructor() { }
+  constructor(private mainService: MainService) { }
 
   ngOnInit(): void {
     this.links.push(new Link());
@@ -32,5 +34,12 @@ export class VideoComponent implements OnInit {
 
   trackBy(index: number): number {
     return index;
+  }
+
+  download(): void {
+    for (let i = 0; i < this.links.length; i++) {
+      this.mainService.makeRequest(this.links[i].link);
+
+    }
   }
 }

@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-xs-12">
+    <form name="linkForm" novalidate>
+      <div *ngFor="let link of links; trackBy: trackBy; let i = index" class="row" >
+        <div class="col-xs-12">
+          <div class="form-group">
+            <div class="input-group">
+              <input [(ngModel)]="links[i].link" #links[i].link name="link-{{i}}" type="text" class="form-control" pattern="{{pattern}}" placeholder="{{placeholder}}" required>
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-info" (click)="addLink(i)">Add another</button>
+                <button *ngIf="links.length > 1" type="button" class="btn btn-warning" (click)="removeLink(i)"><i class="glyphicon glyphicon-remove"></i></button>
+              </span>
+            </div>
+            {{link.link}}
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-4 col-xs-offset-5">
+          <button class="btn btn-success btn-lg" type="submit">
+            Download
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

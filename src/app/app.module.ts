@@ -11,9 +11,12 @@ import { MainComponent } from './main/main.component';
 import { MainService } from './main.service';
 import { VideoComponent } from './video/video.component';
 
+import { RotatingPlaneComponent } from 'ng-spin-kit/app/spinner/rotating-plane.component';
+
 @NgModule({
   declarations: [
     AppComponent,
+    RotatingPlaneComponent,
     CatComponent,
     MainComponent,
     VideoComponent

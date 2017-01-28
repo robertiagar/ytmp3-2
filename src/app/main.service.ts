@@ -7,7 +7,7 @@ declare var saveAs: any;
 @Injectable()
 export class MainService {
 
-  private serverUrl = 'http://localhost:3000/youtube/process_get';
+  private serverUrl = 'http://localhost:3001/youtube/process_get';
   private headers = new Headers({ 'Content-Type': 'application/json' });
 
   constructor(private http: Http) { }

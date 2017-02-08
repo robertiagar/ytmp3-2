@@ -22,4 +22,5 @@ It uses angular2, nodejs and ffmpeg as well as a tonne of other modules and libr
 * some serious backend refactoring and cleanup
 * serving the angular app from the server (this will allow me to put it on heroku or something)
 
+> ## Disclaimer
 > Remember, Google says it's illegal to use the app, not to create it. So use it at your own risk!

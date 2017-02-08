@@ -22,7 +22,7 @@
     ],
     "scripts": [
       "../node_modules/file-saver/FileSaver.js",
-      "../node_modules/Blob.js/Blob.js",
+      "../node_modules/blob.js/Blob.js",
       "../node_modules/jquery/dist/jquery.js",
       "../node_modules/bootstrap/dist/js/bootstrap.js"
     ],

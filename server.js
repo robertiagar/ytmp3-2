@@ -132,7 +132,7 @@
       }
 
       var stream = yc(link);
-      var curatedTitle = info.title.replace(/[\>\<\:\"\\\/\|\?\*\.]+/g, "-");
+      var curatedTitle = unescape(encodeURIComponent(info.title.replace(/[|&;$%@"<>()+,]/g, "-")));
       var location = __dirname + '/mp3/' + curatedTitle + '.mp3';
 
       ffmpeg({

@@ -35,4 +35,4 @@ testem.log
 Thumbs.db
 
 logs.txt
-mp3/
+mp3/*.mp3

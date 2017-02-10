@@ -143,7 +143,7 @@
         .saveToFile(location)
         .on('end', function () {
           print({
-            msg: "File ready!",
+            msg: "File \'"+ curatedTitle + ".mp3\'" + " ready! " ,
             ip: getIp(req)
           });
           res.setHeader('Content-Disposition', 'attachment; filename=' + curatedTitle);
